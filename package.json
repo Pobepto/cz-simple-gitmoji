@@ -1,6 +1,6 @@
 {
   "name": "cz-simple-gitmoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adapter for Commitizen formats commit messages with emoji",
   "main": "dist/index.js",
   "files": [
