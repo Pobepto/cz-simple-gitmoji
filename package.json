@@ -2,7 +2,10 @@
   "name": "cz-simple-gitmoji",
   "version": "1.0.0",
   "description": "Adapter for Commitizen formats commit messages with emoji",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "tsc && tsc --project tsconfig.json"
   },
