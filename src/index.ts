@@ -2,10 +2,10 @@ import inquirerAutoCompletePrompt from "inquirer-autocomplete-prompt";
 import inquirerMaxLengthInputPrompt from "inquirer-maxlength-input-prompt";
 
 import { MAX_HEAD_LINE_WIDTH, MAX_SUBJECT_LINE_WIDTH } from "./consts";
-import { filterMojis, getMojis } from "./utils";
+import { filterMojis, getMojisChoices } from "./utils";
 
 const createQuestions = () => {
-  const choices = getMojis();
+  const choices = getMojisChoices();
   const questions = [
     {
       type: "autocomplete",
@@ -30,9 +30,9 @@ const prompter = (cz, commit) => {
   cz.prompt.registerPrompt("maxlength-input", inquirerMaxLengthInputPrompt);
 
   cz.prompt(createQuestions()).then((answers) => {
-    const emoji = answers.type.emoji;
+    const emojiCode = answers.type.code;
 
-    const head = `${emoji} ${answers.subject.trim()}`.slice(
+    const head = `${emojiCode} ${answers.subject.trim()}`.slice(
       0,
       MAX_HEAD_LINE_WIDTH
     );

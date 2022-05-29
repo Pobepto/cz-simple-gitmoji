@@ -5,6 +5,12 @@ export interface GitMoji {
   name: string;
 }
 
+export interface GitMojiChoice {
+  name: string;
+  value: { emoji: string; code: string };
+  code: string;
+}
+
 export const MAX_HEAD_LINE_WIDTH = 100;
 export const MAX_SUBJECT_LINE_WIDTH = 75;
 

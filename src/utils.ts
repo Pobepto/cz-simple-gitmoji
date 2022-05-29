@@ -1,10 +1,10 @@
 import pad from "pad";
-import { GIT_MOJIS } from "./consts";
+import { GitMojiChoice, GIT_MOJIS } from "./consts";
 
 export const filterMojis = (
-  arr: { name: string; code: string }[],
+  arr: GitMojiChoice[],
   query: string
-) => {
+): GitMojiChoice[] => {
   return arr.filter(({ name, code }) => {
     return (
       name.toLocaleLowerCase().includes(query) ||
@@ -13,21 +13,10 @@ export const filterMojis = (
   });
 };
 
-export const getMojis = () => {
-  const maxNameLength = GIT_MOJIS.reduce(
-    (maxLength, type) =>
-      type.name.length > maxLength ? type.name.length : maxLength,
-    0
-  );
-
+export const getMojisChoices = (): GitMojiChoice[] => {
   return GIT_MOJIS.map((choice) => ({
-    name: `${pad(choice.code, maxNameLength)}  ${choice.emoji}  ${
-      choice.description
-    }`,
-    value: {
-      emoji: choice.emoji,
-      name: choice.name,
-    },
+    name: `${choice.emoji}\t${choice.description}`,
+    value: { emoji: choice.emoji, code: choice.code },
     code: choice.code,
   }));
 };
