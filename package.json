@@ -1,21 +1,36 @@
 {
   "name": "cz-simple-gitmoji",
   "version": "1.0.0",
-  "description": "",
+  "description": "Adapter for Commitizen formats commit messages with emoji",
   "main": "index.js",
   "scripts": {
     "build": "tsc && tsc --project tsconfig.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^4.7.2"
+  "keywords": [
+    "cz",
+    "cz-adapter",
+    "commitizen",
+    "commitizen-adapter",
+    "emoji",
+    "gitmoji"
+  ],
+  "author": {
+    "name": "Robert Sayakhov",
+    "email": "roobertdantes@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Pobepto/cz-simple-gitmoji ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pobepto/cz-simple-gitmoji"
   },
   "dependencies": {
     "inquirer": "^8.2.4",
     "inquirer-autocomplete-prompt": "^2.0.0",
     "inquirer-maxlength-input-prompt": "^1.0.2",
     "pad": "^3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.2"
   }
 }
