@@ -1,0 +1,21 @@
+{
+  "name": "cz-simple-gitmoji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && tsc --project tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "inquirer-autocomplete-prompt": "^2.0.0",
+    "inquirer-maxlength-input-prompt": "^1.0.2",
+    "pad": "^3.2.0"
+  }
+}
