@@ -16,11 +16,11 @@ This is a simple [commitizen] adapter that will allow you to format your message
 
 ```bash
 #npm
-npm install -D cz-simple-emoji
+npm install -D cz-simple-gitmoji
 #yarn
-yarn add -D cz-simple-emoji
+yarn add -D cz-simple-gitmoji
 #pnpm
-pnpm add -D cz-simple-emoji
+pnpm add -D cz-simple-gitmoji
 ```
 
 Add this to your `package.json`:
@@ -28,7 +28,7 @@ Add this to your `package.json`:
 ```json
 "config": {
   "commitizen": {
-    "path": "cz-simple-emoji"
+    "path": "cz-simple-gitmoji"
   }
 }
 ```
